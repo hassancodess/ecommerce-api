@@ -9,7 +9,7 @@
         "start:dev": "dotenvx run -f .env.development -- tsx watch src/server",
         "start:prod": "dotenvx run -f .env.production -- tsx watch src/server",
         "build": "rimraf dist && tsc --noEmit false && tsc-alias",
-        "deploy:prod": "dotenvx run -- pm2 start ecosystem.config.cjs",
+        "deploy:prod": "dotenvx run -- pm2 startOrRestart ecosystem.config.cjs",
         "migrate:dev": "dotenvx run -f .env.development -- npx prisma migrate dev",
         "lint": "eslint --fix",
         "format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",

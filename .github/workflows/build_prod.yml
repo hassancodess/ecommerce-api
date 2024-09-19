@@ -52,4 +52,4 @@ jobs:
                   path: ./
 
             - name: Deploy Application
-              run: npm run deploy:start
+              run: npm run deploy:prod

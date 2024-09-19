@@ -13,7 +13,7 @@ const options = {
         paths: paths,
         servers: [
             {
-                url: `http://localhost:${env.PORT}`
+                url: `http://localhost:${env.PORT}/api/`
             }
         ]
     },

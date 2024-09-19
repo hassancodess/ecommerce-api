@@ -1,4 +1,4 @@
-name: 'Execution Flow'
+name: 'Build and Deploy'
 
 on:
     workflow_dispatch:

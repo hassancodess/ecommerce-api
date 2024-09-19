@@ -37,7 +37,7 @@ jobs:
               uses: actions/upload-artifact@v4
               with:
                   name: 'app-artifact'
-                  path: dist
+                  path: ./
 
     deploy:
         name: Deploy Application
@@ -49,7 +49,7 @@ jobs:
               uses: actions/download-artifact@v4
               with:
                   name: 'app-artifact'
-                  path: dist
+                  path: ./
 
             - name: Deploy Application
               run: npm run deploy:start

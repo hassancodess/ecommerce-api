@@ -21,13 +21,15 @@ app.use(rateLimiter);
 
 // API
 app.use('/api', routes);
-app.use(
-    '/docs',
-    swaggerUI.serve,
-    swaggerUI.setup(swaggerDocument, {
-        customCss: '.swagger-ui .topbar { display: none }'
-    })
-);
+if (env.NODE_ENV != 'production') {
+    app.use(
+        '/docs',
+        swaggerUI.serve,
+        swaggerUI.setup(swaggerDocument, {
+            customCss: '.swagger-ui .topbar { display: none }'
+        })
+    );
+}
 
 app.get('/', (req, res) => res.send('Server is running!'));
 

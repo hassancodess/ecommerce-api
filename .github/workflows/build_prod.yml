@@ -31,9 +31,6 @@ on:
 
 jobs:
     lint:
-        defaults:
-            run:
-                working-directory: app
         name: Lint Code
         runs-on: self-hosted
 

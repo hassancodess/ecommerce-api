@@ -43,7 +43,7 @@ jobs:
         name: Deploy Application
         runs-on: self-hosted
         needs: [lint, build]
-
+        environment: production
         steps:
             - name: Download build artifacts
               uses: actions/download-artifact@v4

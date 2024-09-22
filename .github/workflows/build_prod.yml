@@ -59,6 +59,9 @@ jobs:
                   echo PORT=${{ secrets.PORT }} >> .env
                   cat .env
 
+            - name: Update pm2
+              run: pm2 update
+
             - name: Deploy Application
               run: npm run deploy:prod
 

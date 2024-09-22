@@ -50,6 +50,13 @@ jobs:
               with:
                   name: 'app-artifact'
                   path: ./
+            
+            - name: Create .env file
+              uses: ozaytsev86/create-env-file@v1
+              with:
+                PORT: ${{ secrets.PORT }}
+                DATABASE_URL: ${{ secrets.DATABASE_URL }}
+                NODE_ENV: ${{secrets.NODE_ENV}}
 
             - name: Deploy Application
               run: npm run deploy:prod

@@ -7,14 +7,13 @@ jobs:
     build_dev:
         name: Build Dev
         runs-on: ubuntu-latest
-        environment: development
         steps:
             - name: Checkout code
-              run: echo >> ${{secrets.PORT}} - ${{secrets.DATABSE_URL}} - ${{secrets.NODE_ENV}}
+              run: echo >> ${{secrets.PORT}} - ${{secrets.DATABASE_URL}} - ${{secrets.NODE_ENV}}
     build_prod:
         name: Build Prod
         runs-on: ubuntu-latest
         environment: production
         steps:
             - name: Checkout code
-              run: echo >> ${{secrets.PORT}} - ${{secrets.DATABSE_URL}} - ${{secrets.NODE_ENV}}
+              run: echo >> ${{secrets.PORT}} - ${{secrets.DATABASE_URL}} - ${{secrets.NODE_ENV}}

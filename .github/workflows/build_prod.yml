@@ -61,3 +61,6 @@ jobs:
 
             - name: Deploy Application
               run: npm run deploy:prod
+
+            - name: Save PM2
+              run: pm2 save

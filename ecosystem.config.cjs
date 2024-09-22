@@ -3,8 +3,7 @@ module.exports = {
     apps: [
         {
             name: 'ecommerce-api',
-            script: 'dist/server.js',
-            output: './logs/out.log'
+            script: 'dist/server.js'
         }
     ]
 };
